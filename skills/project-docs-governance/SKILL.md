@@ -6,8 +6,9 @@ description: >
   docs/index.md as the read router, docs/context.md as the current project
   snapshot, docs/specs as current rules, docs/adr as decision rationale,
   docs/history as downgraded historical material, plus commands and roadmap
-  docs. Also use before changing code in a repo that follows this structure,
-  to decide what documentation to read or update.
+  docs. Also use when bootstrapping or retrofitting this system into an
+  existing repository, or before changing code in a repo that follows this
+  structure, to decide what documentation to read or update.
 ---
 
 # Project Docs Governance
@@ -220,6 +221,43 @@ When docs change:
 - Do not let `AGENTS.md` and `docs/index.md` duplicate detailed routing.
 - Do not let `roadmap.md` and `context.md` drift into parallel status documents.
 - Every doc must have a clear reader and reading moment. If it does not, merge it, delete it, or move it to history.
+
+## Bootstrapping Into an Existing Repo
+
+When asked to land this system in an existing repository, implement it yourself. Do not ask the user to classify documents manually.
+
+First inventory the repo:
+
+- Existing docs, READMEs, plans, handoff notes, and design files.
+- Package manifests, scripts, task runners, and CI files.
+- Tests, schemas, migrations, generated contracts, and config.
+- Source directory layout and major runtime boundaries.
+
+Then create the smallest useful governance layer:
+
+- `AGENTS.md`
+- `docs/index.md`
+- `docs/context.md`
+- `docs/specs/README.md`
+- `docs/adr/README.md`
+- `docs/history/README.md`
+
+Add `docs/commands.md` only when commands or validation flow can be discovered. Add `docs/roadmap.md` only when current direction, phases, or non-goals are documented or strongly inferable.
+
+Prefer routing to existing docs over moving them. Move or rewrite existing docs only when their new home is obvious and the change improves future navigation.
+
+Create initial specs only for areas supported by repository evidence. Common first specs are architecture, data model, runtime boundaries, API contracts, or validation flow. Do not invent product strategy, unstated architecture intent, or future plans.
+
+Create ADRs only for decisions evident from code, configs, tests, or existing docs. If a decision is plausible but not evidenced, record it as an open question in `docs/context.md`, not as an ADR.
+
+Keep `docs/history/` empty except for migrated old plans or documents that are clearly historical. Historical material must remain downgraded.
+
+Before finishing a bootstrap:
+
+1. Ensure `docs/index.md` contains L1/L2/L3 reading levels.
+2. Add task-specific reading routes for the parts of the repo you can identify.
+3. Verify claims against code, scripts, tests, schemas, or existing docs where practical.
+4. Summarize created files, inferred facts, routed existing docs, and unresolved questions.
 
 ## Working Procedure
 
