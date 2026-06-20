@@ -1,6 +1,6 @@
 # Byron's Skills
 
-Personal Codex skills for reusable engineering workflows.
+Personal agent skills for reusable engineering workflows.
 
 ## Structure
 
@@ -8,14 +8,12 @@ Personal Codex skills for reusable engineering workflows.
 skills/
 └── skill-name/
     ├── SKILL.md
-    ├── agents/
-    │   └── openai.yaml
     ├── references/
     ├── scripts/
     └── assets/
 ```
 
-Only `SKILL.md` is required. Add `agents/openai.yaml` for UI metadata, and add `references/`, `scripts/`, or `assets/` only when the skill genuinely needs them.
+Only `SKILL.md` is required. Add `references/`, `scripts/`, or `assets/` only when the skill genuinely needs them.
 
 ## Conventions
 

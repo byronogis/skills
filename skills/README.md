@@ -1,6 +1,6 @@
 # Skills
 
-Each subdirectory is one reusable Codex skill.
+Each subdirectory is one reusable agent skill.
 
 Expected minimum:
 
@@ -11,7 +11,6 @@ skill-name/
 
 Optional resources:
 
-- `agents/openai.yaml` for user-facing skill metadata.
 - `references/` for longer documentation loaded only when needed.
 - `scripts/` for deterministic helper programs.
 - `assets/` for templates or media used by the skill.
