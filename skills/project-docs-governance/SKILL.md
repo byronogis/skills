@@ -1,6 +1,13 @@
 ---
 name: project-docs-governance
-description: Use when creating, reviewing, or maintaining an agent-readable project documentation governance system: AGENTS.md as the agent work contract, docs/index.md as the read router, docs/context.md as the current project snapshot, docs/specs as current rules, docs/adr as decision rationale, docs/history as downgraded historical material, plus commands and roadmap docs. Also use before changing code in a repo that follows this structure, to decide what documentation to read or update.
+description: >
+  Use when creating, reviewing, or maintaining an agent-readable project
+  documentation governance system: AGENTS.md as the agent work contract,
+  docs/index.md as the read router, docs/context.md as the current project
+  snapshot, docs/specs as current rules, docs/adr as decision rationale,
+  docs/history as downgraded historical material, plus commands and roadmap
+  docs. Also use before changing code in a repo that follows this structure,
+  to decide what documentation to read or update.
 ---
 
 # Project Docs Governance
@@ -231,4 +238,3 @@ Before finishing:
 2. Update only the necessary documentation layer.
 3. Check that no historical material has become an unstated current rule.
 4. Summarize which docs were read or updated.
-
