@@ -1,0 +1,5 @@
+interface:
+  display_name: "Project Docs Governance"
+  short_description: "Govern agent-readable project docs"
+  default_prompt: "Use $project-docs-governance to set up or maintain this repo's agent-readable documentation system."
+
