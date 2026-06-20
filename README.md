@@ -1,25 +1,18 @@
 # Byron's Skills
 
-Personal agent skills for reusable engineering workflows.
+Small, reusable agent skills for engineering work.
 
-## Structure
+These skills are meant to be copied, adapted, and composed. They should stay narrow enough to be useful in real projects, without taking over the whole development process.
 
-```text
-skills/
-└── skill-name/
-    ├── SKILL.md
-    ├── references/
-    ├── scripts/
-    └── assets/
-```
+## Skills
 
-Only `SKILL.md` is required. Add `references/`, `scripts/`, or `assets/` only when the skill genuinely needs them.
+### Engineering
 
-## Conventions
+- [`project-docs-governance`](./skills/project-docs-governance/SKILL.md) — Maintain an agent-readable project documentation system with explicit reading routes, trust levels, current specs, ADRs, and downgraded history.
 
-- Skill folder names use lowercase hyphen-case.
-- `SKILL.md` frontmatter contains only `name` and `description`.
-- Keep `SKILL.md` concise; move bulky optional material into `references/`.
-- Prefer small, composable skills over broad process frameworks.
-- Do not add placeholder resource directories.
+## Principles
+
+- Prefer sharp, composable skills over broad frameworks.
+- Keep project-specific rules inside the project, not in this repo.
+- Treat documentation as operational memory: small, current, and easy for an agent to navigate.
 
