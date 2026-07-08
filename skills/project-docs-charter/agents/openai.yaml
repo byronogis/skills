@@ -1,0 +1,7 @@
+interface:
+  display_name: "Project Docs Charter"
+  short_description: "Initialize a repo-specific agent documentation charter."
+  default_prompt: "Use this skill to set up a project documentation charter."
+
+policy:
+  allow_implicit_invocation: false
